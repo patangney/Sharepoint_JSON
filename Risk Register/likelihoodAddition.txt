@@ -1,0 +1,1 @@
+=IF(Likelihood="1. Improbable","1",IF(Likelihood="2. Low Probability","2",IF(Likelihood="3. Probable","3",IF(Likelihood="4. Likely","4",IF(Likelihood="5. Highly Probable","5",IF(Likelihood="6. Definite","6"))))))

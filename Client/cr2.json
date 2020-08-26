@@ -1,0 +1,27 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+      "color": "#fff",
+      "text-decoration": "=if(@currentField == 'Closed','line-through','inherit')",
+      "font-weight": "600",
+      "padding": "4px",
+      "background-color": "=if(@currentField == 'Pending AC Approval', '#BFBFBF',if(@currentField == 'New', '#B9DAD0','#000000'))"
+    },
+    "children": [
+      {
+        "elmType": "span",
+        "style": {
+          "display": "inline-block",
+          "padding": "0 14px"
+        },
+        "attributes": {
+          "iconName": "=if(@currentField == 'New', 'NewAnalyticsQuery', if(@currentField == 'In Progress', 'Forward', if(@currentField == 'Closed', 'CheckMark', if(@currentField == 'On Hold', 'AsteriskSolid', if(@currentField == 'Under Review', 'SchoolDataSyncLogo', if(@currentField == 'Scheduled', 'ScheduleEventAction', if(@currentField == 'Rejected', 'LogRemove','NewAnalyticsQuery'))))"
+        }
+      },
+      {
+        "elmType": "span",
+        "txtContent": "@currentField"
+      }
+    ]
+  }

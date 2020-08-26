@@ -1,0 +1,27 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "elmType": "div",
+    "style": {
+        "color": "#fff",
+        "text-decoration": "=if(@currentField == 'Closed','line-through','inherit')",
+        "font-weight": "600",
+        "padding": "4px",
+        "background-color": "=if(@currentField == 'Pending AC Approval','#BFBFBF',#000000)"
+    },
+    "children": [
+        {
+            "elmType": "span",
+            "style": {
+                "display": "inline-block",
+                "padding": "0 14px"
+            },
+            "attributes": {
+                "iconName": ""
+            }
+        },
+        {
+            "elmType": "span",
+            "txtContent": "@currentField"
+        }
+    ]
+}

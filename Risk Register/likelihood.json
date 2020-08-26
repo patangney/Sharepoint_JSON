@@ -1,0 +1,12 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "debugMode": true,
+    "elmType": "div",
+    "txtContent": "@currentField",
+    "style": {
+      "background-color": "=if(@currentField == '1. Improbable', '#00B050',if(@currentField == '2. Low Probability', '#92D050',if(@currentField == '3. Probable', '#FFC000',if(@currentField == '4. Likely', '#FF6600',if(@currentField == '5. Highly Probable', '#FF0000',if(@currentField == '6. Definite', '#C00000','#C00000'))))))",
+      "color": "#2b2b2b",
+      "font-weight": "500",
+      "padding-left": "10px"
+    }
+  }

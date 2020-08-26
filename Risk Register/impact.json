@@ -1,0 +1,11 @@
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/column-formatting.schema.json",
+    "debugMode": true,
+    "elmType": "div",
+    "txtContent": "@currentField",
+    "style": {
+      "background-color": "=if(@currentField == '1. Incidental', '#00B050',if(@currentField == '2. Minor', '#92D050',if(@currentField == '3. Serious', '#FFC000',if(@currentField == '4. Major', '#FF6600',if(@currentField == '5. Severe', '#FF0000',if(@currentField == '6. Catastrophic', '#C00000','#C00000'))))))",
+      "color": "#2b2b2b",
+      "padding-left": "10px"
+    }
+  }
